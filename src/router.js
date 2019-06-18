@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
+import EditProduct from './components/Products/EditProduct.vue'
 
 Vue.use(Router)
 
@@ -12,6 +13,12 @@ export default new Router({
       path: '/',
       name: 'home',
       component: Home
+    },
+    {
+      path: '/products/:id/edit',
+      name: 'editProduct',
+      component: EditProduct,
+      props: true
     },
     {
       path: '/about',
